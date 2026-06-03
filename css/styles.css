@@ -1,0 +1,670 @@
+:root {
+    /* Paleta de Colores de Los Simpson */
+    --simpson-yellow: #FFD90F;
+    --sky-blue: #009DDC;
+    --donut-pink: #F8A9CB;
+    --red-alert: #F02828;
+    --dark-text: #1A1A1A;
+    --white: #FFFFFF;
+    --gray-bg: #F4F4F4;
+    
+    /* Efecto Cartoon o de Cómic */
+    --border-cartoon: 4px solid #1A1A1A;
+    --border-thin: 2px solid #1A1A1A;
+    --shadow-flat: 6px 6px 0px #1A1A1A;
+    --shadow-flat-small: 4px 4px 0px #1A1A1A;
+}
+
+/* --- Reseteo y Estilos Generales --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--simpson-yellow);
+    color: var(--dark-text);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, .price, .badge, .category-btn {
+    font-family: 'Fredoka', sans-serif;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* --- Hero / Cabecera --- */
+.header {
+    background-color: var(--sky-blue);
+    padding: 80px 20px 50px;
+    text-align: center;
+    border-bottom: var(--border-cartoon);
+    position: relative;
+}
+
+.header h1 {
+    font-size: 3.5rem;
+    color: var(--simpson-yellow);
+    text-shadow: 4px 4px 0px var(--dark-text);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.header p {
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-shadow: 2px 2px 0px var(--dark-text);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.header p i {
+    color: var(--simpson-yellow);
+}
+
+/* Contenedor de Badges Informativos */
+.info-badges {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    background-color: var(--white);
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: var(--border-cartoon);
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: var(--shadow-flat-small);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.badge i {
+    color: var(--red-alert);
+}
+
+/* --- Barra de Categorías Dinámicas --- */
+.categories-nav {
+    background-color: var(--white);
+    border-bottom: var(--border-cartoon);
+    padding: 15px;
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    white-space: nowrap;
+    justify-content: flex-start;
+}
+
+/* Ocultar barra de scroll estéticamente en navegadores */
+.categories-nav::-webkit-scrollbar {
+    height: 6px;
+}
+.categories-nav::-webkit-scrollbar-thumb {
+    background-color: var(--dark-text);
+    border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+    .categories-nav {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+.category-btn {
+    background-color: var(--white);
+    color: var(--dark-text);
+    border: var(--border-thin);
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.15s ease-in-out;
+}
+
+.category-btn:hover, .category-btn.active {
+    background-color: var(--red-alert);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 3px 3px 0px var(--dark-text);
+}
+
+/* --- Contenedor de Secciones --- */
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 45px;
+    color: var(--white);
+    text-shadow: 3px 3px 0px var(--dark-text);
+    background-color: var(--donut-pink);
+    display: inline-block;
+    padding: 12px 35px;
+    border: var(--border-cartoon);
+    border-radius: 20px;
+    transform: rotate(-1.5deg);
+    box-shadow: var(--shadow-flat-small);
+}
+
+/* --- Grid de Productos (Menú) --- */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1px));
+    gap: 30px;
+    justify-content: center;
+}
+
+.menu-card {
+    background-color: var(--white);
+    border: var(--border-cartoon);
+    border-radius: 20px;
+    padding: 22px;
+    box-shadow: var(--shadow-flat);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 10px 10px 0px var(--sky-blue);
+}
+
+/* En caso de que el JSON incluya imágenes en el futuro */
+.menu-card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: var(--border-thin);
+    margin-bottom: 15px;
+}
+
+.menu-card h3 {
+    font-size: 1.4rem;
+    color: var(--red-alert);
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.menu-card p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #444;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.menu-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.price {
+    font-size: 1.6rem;
+    color: var(--sky-blue);
+    text-shadow: 1px 1px 0px var(--dark-text);
+}
+
+/* Badge de Descuento inside cards */
+.discount-badge {
+    background-color: var(--red-alert);
+    color: var(--white);
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    border: var(--border-thin);
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    transform: rotate(5deg);
+}
+
+.price-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.discount-price {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+/* --- Sección de Reseñas --- */
+.reviews-section {
+    background-color: var(--white);
+    border-top: var(--border-cartoon);
+    border-bottom: var(--border-cartoon);
+}
+
+.review-card {
+    background-color: var(--gray-bg);
+    border: var(--border-cartoon);
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 5px 5px 0px var(--simpson-yellow);
+    display: flex;
+    flex-direction: column;
+}
+
+.stars {
+    color: #FFD700;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    text-shadow: 1.5px 1.5px 0px var(--dark-text);
+}
+
+.review-card p {
+    font-style: italic;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.review-card h4 {
+    font-family: 'Fredoka', sans-serif;
+    color: var(--sky-blue);
+    font-size: 1.1rem;
+    text-align: right;
+    margin-top: auto;
+}
+
+/* --- Estados de Carga / Spinners --- */
+.loading-spinner {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.5rem;
+    padding: 40px;
+    color: var(--dark-text);
+}
+
+/* --- Footer --- */
+.footer {
+    text-align: center;
+    padding: 50px 20px 110px; /* Margen inferior para que no tape el botón flotante */
+    background-color: var(--dark-text);
+    color: var(--white);
+    border-top: var(--border-thin);
+}
+
+.footer strong {
+    font-size: 1.6rem;
+    color: var(--simpson-yellow);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* --- Botón Flotante de WhatsApp --- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366;
+    color: var(--white);
+    padding: 14px 28px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.4rem;
+    text-decoration: none;
+    border: var(--border-cartoon);
+    box-shadow: var(--shadow-flat-small);
+    z-index: 999;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.08) translateY(-3px);
+    background-color: #20b858;
+}
+
+.whatsapp-float i {
+    font-size: 1.8rem;
+}
+
+/* --- Responsive Media Queries --- */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        padding: 10px 25px;
+    }
+
+    .whatsapp-float {
+        padding: 14px;
+        border-radius: 50%;
+    }
+
+    .whatsapp-float .btn-text {
+        display: none; /* Esconde el texto en pantallas pequeñas para dejar solo el ícono circular */
+    }
+}
+
+/* --- Contenedor e Imagen del Logo Circular --- */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.brand-logo {
+    width: 130px;
+    height: 130px;
+    object-fit: cover; /* Asegura que la imagen no se deforme si no es perfectamente cuadrada */
+    background-color: var(--white);
+    border-radius: 50%; /* Hace la imagen completamente circular */
+    border: var(--border-cartoon); /* Borde negro grueso estilo cómic */
+    box-shadow: var(--shadow-flat-small); /* Sombra plana negra */
+    transition: transform 0.3s ease;
+}
+
+/* Efecto divertido al pasar el mouse (Hover) */
+.brand-logo:hover {
+    transform: scale(1.05) rotate(5deg);
+}
+
+/* Ajuste responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .brand-logo {
+        width: 100px;
+        height: 100px;
+        border-width: 3px; /* Borde un poco más delgado en móviles */
+    }
+}
+
+/* --- Sección de la Galería Transicional --- */
+.gallery-section {
+    max-width: 800px; /* Tamaño ideal para que se vea genial en celulares y centrado en PC */
+    margin: 40px auto 20px;
+    padding: 0 20px;
+}
+
+.gallery-slider {
+    position: relative;
+    width: 100%;
+    height: 350px; /* Altura fija para PC */
+    border: var(--border-cartoon);
+    border-radius: 20px;
+    box-shadow: var(--shadow-flat);
+    background-color: var(--dark-text);
+    overflow: hidden;
+}
+
+.gallery-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Estilo para cada diapositiva de imagen */
+.gallery-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out; /* Transición suave de desvanecimiento */
+    z-index: 1;
+}
+
+.gallery-slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.gallery-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita que las fotos de Instagram se deformen */
+}
+
+/* Indicadores de posición (Puntitos) */
+.gallery-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+    background-color: rgba(26, 26, 26, 0.6);
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 2px solid var(--dark-text);
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--white);
+    border: 1px solid var(--dark-text);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.dot.active {
+    background-color: var(--simpson-yellow);
+    transform: scale(1.2);
+}
+
+/* Adaptación para pantallas móviles */
+@media (max-width: 768px) {
+    .gallery-slider {
+        height: 220px; /* Altura más cómoda para pantallas de celulares */
+    }
+}
+.menu-grid {
+    display: grid;
+    /* Cambiado minmax de 290px a 320px para dar más espacio a la foto y textos laterales */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    gap: 30px;
+    justify-content: center;
+}
+
+/* --- Footer Renovado y Profesional --- */
+.footer {
+    background-color: var(--dark-text);
+    color: var(--white);
+    border-top: var(--border-cartoon);
+    padding: 60px 20px 120px; /* Margen amplio inferior para dar espacio al botón flotante de WhatsApp */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+    text-align: left;
+}
+
+.footer-column h3 {
+    color: var(--simpson-yellow);
+    font-size: 1.25rem;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: 'Fredoka', sans-serif;
+}
+
+.footer-column p {
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.footer-column p i {
+    color: var(--sky-blue);
+    margin-right: 5px;
+}
+
+.footer-column .highlight-text {
+    color: var(--white);
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.footer-brand-section #footer-brand {
+    font-size: 2.2rem;
+    color: var(--simpson-yellow);
+    text-shadow: 2px 2px 0px var(--red-alert);
+    display: block;
+    margin-bottom: 12px;
+}
+
+.footer-slogan {
+    font-style: italic;
+    color: var(--donut-pink) !important;
+}
+
+/* --- Botones e Integración de Apps de Delivery --- */
+.footer-delivery {
+    display: flex;
+    flex-direction: column;
+}
+
+.delivery-logos {
+    display: flex;
+    gap: 15px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.delivery-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--white);
+    color: var(--dark-text);
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 14px;
+    border: var(--border-thin);
+    font-weight: 800;
+    font-size: 0.95rem;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s;
+    box-shadow: var(--shadow-flat-small);
+}
+
+.delivery-link:hover {
+    transform: translate(-2px, -2px);
+}
+
+/* Efectos hover personalizados con los colores de marca de las apps */
+.rappi-btn:hover {
+    box-shadow: 4px 4px 0px #FF441F;
+    background-color: #FFF5F2;
+}
+
+.didi-btn:hover {
+    box-shadow: 4px 4px 0px #FF8C00;
+    background-color: #FFF9F2;
+}
+
+.delivery-logo-img {
+    height: 20px;
+    width: auto;
+    object-fit: contain;
+}
+
+.didi-img {
+    height: 14px; /* Ajuste proporcional por la orientación horizontal del logo de DiDi */
+}
+
+/* --- Separador y Línea de Créditos --- */
+.footer-divider {
+    border: 0;
+    height: 3px;
+    background-color: #2a2a2a;
+    max-width: 1200px;
+    margin: 40px auto 30px;
+    border-radius: 10px;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 0.85rem;
+    color: #999;
+}
+
+.footer-bottom p {
+    font-weight: 600;
+}
+
+.developer-credit span {
+    color: var(--sky-blue);
+    font-weight: 800;
+}
+
+/* --- Ajustes Responsivos para Pantallas de Celulares --- */
+@media (max-width: 768px) {
+    .footer-container {
+        text-align: center;
+        gap: 35px;
+    }
+    
+    .delivery-logos {
+        justify-content: center;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}

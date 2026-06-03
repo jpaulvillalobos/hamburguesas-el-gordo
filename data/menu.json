@@ -1,0 +1,187 @@
+{
+  "infoGlobal": {
+    "nombre": "Hamburguesas Donde El Gordo",
+    "sede": "Suba",
+    "direccion": "Calle 148 #109a-42 local 18, Bogotá, Colombia",
+    "horarios": "Martes a Domingo: 13:00 - 22:45",
+    "tiempoEntrega": "35 min",
+    "promoDestacada": "Envío Gratis (Nuevos Usuarios Rappi)",
+    "whatsappPedido": "573000000000"
+  },
+  "menu": [
+    {
+      "id": 1,
+      "nombre": "Hamburguesa Especial Doble Carne",
+      "descripcion": "Hamburguesa con doble carne de res artesanal de 110 g, lechuga, papas chip, queso tajado, jamón y salsas.",
+      "precio": 25000,
+      "categoria": "Hamburguesas",
+      "imagen": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=500"
+    },
+    {
+      "id": 2,
+      "nombre": "Hamburguesa Pollo Apanada",
+      "descripcion": "Croqueta de pollo apanado de 110 grs. huevo de codorniz, verduras frescas, papa chip, queso tajado, jamón y salsas.",
+      "precio": 23150,
+      "categoria": "Hamburguesas",
+      "imagen": "https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?q=80&w=500"
+    },
+    {
+      "id": 3,
+      "nombre": "Hamburguesa Rib Burguer",
+      "descripcion": "Hamburguesa con carne de res artesanal de 110 g, queso cheddar, dos tiras de tocineta, verduras frescas y costillas bañadas en salsa BBQ.",
+      "precio": 28150,
+      "categoria": "Hamburguesas",
+      "imagen": "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?q=80&w=500"
+    },
+    {
+      "id": 4,
+      "nombre": "Hamburguesa la Independiente",
+      "descripcion": "Carne de res artesanal de 200 gr. tajadas de plátano, tocineta, huevo frito, maiz tierno, huevo de codorniz, verduras frescas, salsas y queso cheddar.",
+      "precio": 33750,
+      "categoria": "Hamburguesas",
+      "imagen": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?q=80&w=500"
+    },
+    {
+      "id": 5,
+      "nombre": "Hamburguesa Krosty",
+      "descripcion": "Hamburguesa con carne de res artesanal de 110 gr, verduras frescas, papas chip, jamón, pollo y salsas de casa.",
+      "precio": 19150,
+      "precioOriginal": 22500,
+      "descuento": "15%",
+      "categoria": "Hamburguesas",
+      "imagen": "https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=500"
+    },
+    {
+      "id": 6,
+      "nombre": "Hamburguesa la Del Gordo",
+      "descripcion": "Doble carne de res de 110 gr. filete de pechuga, 1 huevo frito, verduras frescas, papas chip, 2 huevos de codorniz, champiñon, doble tocineta, queso tajado y salsas.",
+      "precio": 34000,
+      "precioOriginal": 40000,
+      "descuento": "15%",
+      "categoria": "Hamburguesas",
+      "imagen": "https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=500"
+    },
+    {
+      "id": 7,
+      "nombre": "Hamburguesa Jefe Gorgory",
+      "descripcion": "Doble carne de res artesanal de 110 gr. bañada en queso, pepinillos, tocineta, verduras frescas y salsas de la casa.",
+      "precio": 31250,
+      "categoria": "Hamburguesas",
+      "imagen": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=500"
+    },
+    {
+      "id": 8,
+      "nombre": "Hamburguesa Ranchera",
+      "descripcion": "Carne de res artesanal de 200 gr. chorizo santa-rosano, salsa de guacamole, 2 tajadas de jamón, 2 tajadas de queso cheddar, pico de gallo, verduras frescas y salsas.",
+      "precio": 35650,
+      "categoria": "Hamburguesas",
+      "imagen": "https://images.unsplash.com/photo-1553979459-d2229ba7433b?q=80&w=500"
+    },
+    {
+      "id": 9,
+      "nombre": "Hamburguesa Clasica",
+      "descripcion": "Hamburguesa con carne de res artesanal de 110 gr, lechuga, papas chip, queso tajado y salsas de casa.",
+      "precio": 16800,
+      "categoria": "Hamburguesas",
+      "imagen": "https://images.unsplash.com/photo-1547584370-2cc98b8b8dc8?q=80&w=500"
+    },
+    {
+      "id": 10,
+      "nombre": "Hamburguesa Poderosa de Bart",
+      "descripcion": "Hamburguesa con carne de res artesanal de 110 gr, pollo, champiñones, tocineta, verduras frescas, papas chip, queso tajado, jamón y salsas de casa.",
+      "precio": 25000,
+      "categoria": "Hamburguesas",
+      "imagen": "https://images.unsplash.com/photo-1610440042657-612c34d95e9f?q=80&w=500"
+    },
+    {
+      "id": 11,
+      "nombre": "Hamburguesa Artesanal",
+      "descripcion": "Carne de res artesanal de 200 gr. queso cheddar, pepinillos, tocineta, verduras frescas, y salsas de la casa.",
+      "precio": 21800,
+      "precioOriginal": 25650,
+      "descuento": "15%",
+      "categoria": "Hamburguesas",
+      "imagen": "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?q=80&w=500"
+    },
+    {
+      "id": 12,
+      "nombre": "Pizza Pollo con Champiñones",
+      "descripcion": "Pizza con pollo, champiñones, salsa napolitana y queso. Tamaño a elegir.",
+      "precio": 24400,
+      "categoria": "Pizzas",
+      "imagen": "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=500"
+    },
+    {
+      "id": 13,
+      "nombre": "Pizza Hawaiana",
+      "descripcion": "Piña, jamón, salsa napolitana y queso tamaño a elegir.",
+      "precio": 24400,
+      "categoria": "Pizzas",
+      "imagen": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=500"
+    },
+    {
+      "id": 14,
+      "nombre": "Pizza Miel Mostaza",
+      "descripcion": "Pollo, tocineta, miel, mostaza, salsa napolitana y queso tamaño a elegir.",
+      "precio": 24400,
+      "categoria": "Pizzas",
+      "imagen": "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=500"
+    },
+    {
+      "id": 15,
+      "nombre": "Pizza Alemana Especial",
+      "descripcion": "Pizza con chorizo, tocineta, maíz, queso, aceitunas y cebolla. Tamaño a elegir.",
+      "precio": 26850,
+      "categoria": "Pizzas Especiales",
+      "imagen": "https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=500"
+    },
+    {
+      "id": 16,
+      "nombre": "Pizza Del Gordo Especial",
+      "descripcion": "Tocineta, jamón, salami, cabano, carne molida, champiñon, pollo, pico de gallo, maíz, salsa bbq, orégano y queso.",
+      "precio": 31250,
+      "categoria": "Pizzas Especiales",
+      "imagen": "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?q=80&w=500"
+    },
+    {
+      "id": 17,
+      "nombre": "Pica Poquito",
+      "descripcion": "Trozos de cerdo, tocineta, queso, pico de gallo, jalapeños, tostacos y salsa de aguacate.",
+      "precio": 25000,
+      "categoria": "Perras Hot's",
+      "imagen": "https://images.unsplash.com/photo-1619740455993-9e612b1af08a?q=80&w=500"
+    },
+    {
+      "id": 18,
+      "nombre": "Mazorcada",
+      "descripcion": "Mazorcada con maíz tierno, carne y pollo desmechados, papa cabello de ángel, queso, huevo de codorniz y salsa de maíz.",
+      "precio": 25000,
+      "categoria": "Parrilla",
+      "imagen": "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=500"
+    },
+    {
+      "id": 19,
+      "nombre": "Cajita Feliz Hamburguesa",
+      "descripcion": "Elige tu plato principal, acompañado de papas a la francesa, bebida de 10 oz y una sorpresa.",
+      "precio": 25000,
+      "categoria": "Cajita Feliz",
+      "imagen": "https://images.unsplash.com/photo-1606755962773-d324e0a13086?q=80&w=500"
+    },
+    {
+      "id": 20,
+      "nombre": "Gaseosa Coca Cola Mini 1.5 L",
+      "descripcion": "Bebidas - gaseosa coca cola 1.5 l perfecta para compartir.",
+      "precio": 9500,
+      "categoria": "Bebidas",
+      "imagen": "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?q=80&w=500"
+    },
+    {
+      "id": 21,
+      "nombre": "Gaseosa Colombiana Mini 400 ml",
+      "descripcion": "Bebidas - gaseosa colombiana mini 400 ml.",
+      "precio": 5000,
+      "categoria": "Bebidas",
+      "imagen": "https://images.unsplash.com/photo-1527960656366-ee2a999e3286?q=80&w=500"
+    }
+  ]
+}

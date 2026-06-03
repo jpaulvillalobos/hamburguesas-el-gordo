@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburguesas Donde El Gordo</title>
+    
+    <!-- Tipografías de Los Simpson -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Nunito:wght@600;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome para los Íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Hoja de Estilos Externa -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Hero / Información Dinámica del Local -->
+<!-- Hero / Información Dinámica del Local -->
+    <header class="header">
+        <!-- Contenedor del Logo Circular -->
+        <div class="logo-container">
+            <img src="/image/logo.jpg" alt="Logo Donde El Gordo" id="local-logo" class="brand-logo">
+        </div>
+
+        <h1 id="local-name">Cargando...</h1>
+        <p><i class="fas fa-map-marker-alt"></i> <span id="local-address">Cargando dirección...</span></p>
+        <p><i class="fas fa-clock"></i> <span id="local-hours">Cargando horarios...</span></p>
+        
+        <div class="info-badges">
+            <div class="badge"><i class="fas fa-motorcycle"></i> <span id="local-delivery-time">-- min</span></div>
+            <div class="badge"><i class="fas fa-gift"></i> <span id="local-promo">Cargando promos...</span></div>
+        </div>
+    </header>
+
+    <!-- Filtros de Categorías (Se generarán dinámicamente) -->
+    <nav class="categories-nav" id="categories-container">
+        <!-- JS inyectará botones como: Hamburguesas, Pizzas, Bebidas... -->
+    </nav>
+    <!-- Filtros de Categorías -->
+    <nav class="categories-nav" id="categories-container">
+        <!-- JS inyectará botones dinámicamente -->
+    </nav>
+
+    <!-- 📸 NUEVA SECCIÓN: Galería de Experiencias y Redes Sociales -->
+    <section class="gallery-section">
+        <div class="gallery-slider">
+            <!-- Las imágenes se inyectarán dinámicamente aquí mediante js/script.js -->
+            <div class="gallery-container" id="gallery-container">
+                <div class="loading-spinner">Cargando momentos del Gordo... 🍩</div>
+            </div>
+            
+            <!-- Indicadores (Puntitos abajo del carrusel) -->
+            <div class="gallery-dots" id="gallery-dots"></div>
+        </div>
+    </section>
+
+    <!-- Contenedor Principal del Menú -->
+    <main class="section-container">
+        <div class="text-center">
+            <h2 class="section-title">¡El Menú del Gordo! 🍔</h2>
+        </div>
+        
+        <!-- Aquí es donde JavaScript renderizará las tarjetas de comida mediante el JSON -->
+        <div class="menu-grid" id="menu-container">
+            <div class="loading-spinner">Mmm... ¡Buscando comida! 🍩</div>
+        </div>
+    </main>
+
+    <!-- Sección de Reseñas (Social Proof de Google/CMS) -->
+    <section class="reviews-section section-container">
+        <div class="text-center">
+            <h2 class="section-title">¡Lo que dice Springfield! 🍩</h2>
+        </div>
+        
+
+        <!-- Aquí JavaScript inyectará las reseñas filtradas del JSON -->
+        <div class="menu-grid" id="reviews-container">
+            <!-- Reseñas dinámicas -->
+        </div>
+    </section>
+
+    <!-- Footer Fijo -->
+<!-- Footer Fijo Renovado -->
+    <footer class="footer">
+        <div class="footer-container">
+            
+            <!-- Columna 1: Branding y Esencia -->
+            <div class="footer-column footer-brand-section">
+                <strong id="footer-brand">Donde El Gordo</strong>
+                <p class="footer-slogan">¡El auténtico sabor de Springfield directamente a tu mesa! 🍔🍩</p>
+            </div>
+            
+            <!-- Columna 2: Información de Servicio -->
+            <div class="footer-column">
+                <h3>Horarios de Cocina</h3>
+                <p><i class="fas fa-clock"></i> Martes a Domingo</p>
+                <p class="highlight-text">1:00 PM - 10:45 PM</p>
+            </div>
+            
+            <!-- Columna 3: Enlaces de Pedidos Directos (Apps Aliadas) -->
+            <div class="footer-column footer-delivery">
+                <h3>Pide por tus Apps Favoritas</h3>
+                <p>¿Prefieres delivery externo? Encuéntranos en:</p>
+                <div class="delivery-logos">
+                    <!-- Botón Rappi -->
+                    <a href="https://www.rappi.com.co/restaurantes/900041174-hamburguesas-donde-el-gordo" target="_blank" class="delivery-link rappi-btn" aria-label="Pedir por Rappi">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Rappi_logo.svg" alt="Rappi Logo" class="delivery-logo-img">
+                        <span>Rappi</span>
+                    </a>
+                    
+                    <!-- Botón DiDi Food -->
+                    <a href="https://web.didiglobal.com/co/food/bogota/hamburguesas-donde-el-gordo-imperial/5764607653746312908/" target="_blank" class="delivery-link didi-btn" aria-label="Pedir por DiDi Food">
+                        <img src="/image/didi-food-seeklogo.svg" alt="DiDi Food Logo" class="delivery-logo-img didi-img">
+                        <span>DiDi Food</span>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        
+        <hr class="footer-divider">
+        
+        <!-- Créditos Inferiores y Legal -->
+        <div class="footer-bottom">
+            <p id="footer-legal">&copy; 2026 Hamburguesas Donde El Gordo. Todos los derechos reservados.</p>
+            <p class="developer-credit">Desarrollado por <span>Lobolink Services</span></p>
+        </div>
+    </footer>
+
+    <!-- Botón Dinámico de WhatsApp -->
+    <a href="#" class="whatsapp-float" id="whatsapp-btn" target="_blank" style="display: none;">
+        <i class="fab fa-whatsapp"></i>
+        <span class="btn-text">¡Pedir Ahora!</span>
+    </a>
+
+    <!-- Lógica de la Aplicación -->
+     <script src="js/script.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
